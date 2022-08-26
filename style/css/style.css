@@ -129,18 +129,17 @@ body {
   box-shadow: 5px 5px 15px #000;
 }
 
-.projects .project.in-proсess .inner:hover .project_image {
+.projects .project.not-active .inner:hover .project_image {
   transform: none;
-  box-shadow: 3px 3px 10px #1e4d7f;
 }
-.projects .project.in-proсess .project_image {
+.projects .project.not-active .project_image {
   filter: blur(4px);
 }
-.projects .project.in-proсess .inner {
+.projects .project.not-active .inner {
   overflow: hidden;
 }
-.projects .project.in-proсess .inner::before {
-  content: "Coming soon";
+.projects .project.not-active .inner::before {
+  content: attr(data-text);
   text-align: center;
   font-family: "Exo 2", sans-serif;
   font-size: 40px;

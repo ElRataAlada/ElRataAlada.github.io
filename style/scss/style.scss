@@ -81,12 +81,10 @@ body {
     }
 }
 
-.projects .project.in-proсess{
-    
+.projects .project.not-active{
     .inner:hover{
         .project_image{
             transform: none;
-            box-shadow: 3px 3px 10px #1e4d7f;
         }
     }
 
@@ -98,7 +96,7 @@ body {
         overflow: hidden;
         
         &::before{
-            content: "Coming soon";
+            content: attr(data-text);
             text-align: center;
             font-family: 'Exo 2', sans-serif;
             font-size: 40px;
