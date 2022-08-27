@@ -7,6 +7,10 @@
     .projects .project.in-proсess .inner::before{
         font-size: 35px;
     }
+
+    .new{
+        font-size: 16px;
+    }
 }
 
 
@@ -29,6 +33,12 @@
    .project{
         padding-bottom: 0;
         width: 70%;
+    }
+
+    .new{
+        font-size: 16px;
+        top: -23px;
+        right: -5%;
     }
 }
 
@@ -63,6 +73,11 @@
 
     .projects .project.in-proсess .inner::before{
         font-size: 30px;
+    }
+
+    .new{
+        font-size: 14px;
+        top: -20px;
     }
 }
 
