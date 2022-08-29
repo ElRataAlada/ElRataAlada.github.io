@@ -226,7 +226,7 @@ body {
   .projects .title {
     font-size: 45px;
   }
-  .project .inner:hover .project_image {
+  .project .inner:hover {
     transform: translate(-5px, -5px);
     box-shadow: 3px 3px 10px #000;
   }

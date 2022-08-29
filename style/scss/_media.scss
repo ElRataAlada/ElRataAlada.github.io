@@ -50,16 +50,9 @@
         }
     }
 
-    .project{
-        .inner{
-            &:hover{
-                .project_image{
-                    transform: translate(-5px, -5px);
-                    box-shadow: 3px 3px 10px #000;
-                }
-            }
-        }
-
+    .project .inner:hover{
+        transform: translate(-5px, -5px);
+        box-shadow: 3px 3px 10px #000;
     }
 
     .project_image{
