@@ -11,7 +11,7 @@ export function Loader (){
     const text = locale === 'ua' ? ua : en
 
     return(
-        <>
+        <div className='loader'>
             <div className='loader_top'>
                 <div className='name_wrapper'>
                     <h1 className='name'>{text}<span style={{color:"orange"}}>...</span></h1>
@@ -20,6 +20,6 @@ export function Loader (){
             <div className='loader_bottom'>
                 <div className='heart'></div>
             </div>
-        </>
+        </div>
     )
 }

@@ -1,6 +1,6 @@
 .loader_bottom,
 .loader_top{
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 50vh;
     left: 0;
@@ -20,7 +20,7 @@ body {overflow: hidden;}
 body.white{
     .loader_bottom,
     .loader_top{
-        background-color: #f6f6f6;
+        background-color: #cfcfcf;
         color: black;
     }
 }

@@ -13,27 +13,49 @@ a:hover{text-decoration: none;}
 ul li {list-style: none;}
 img{vertical-align: top;}
 
+html {background-color: #242424;}
+
 body{
   min-height: 100vh;
-  width: 100vw;
-  min-height: 100vh;
-
+  height: fit-content;
+  -webkit-font-smoothing: antialiased;
+  
   color: white;
-  line-height: 1.3em;
+  font-family: 'Open Sans', sans-serif;
 
   background-color: #020206;
   background: -webkit-linear-gradient(to left bottom, #323232, #000000);
-  background-image: linear-gradient(to left bottom, #323232, #000000);
+  background: linear-gradient(to left bottom, #323232, #000000);
+  background-attachment: fixed;
   
+  font-size: 18px;
+  line-height: normal;
+
   transition: all .5s ease;
   
   animation: rotation 15s ease infinite;
 }
 
+body::-webkit-scrollbar {width: 10px;}
+body::-webkit-scrollbar-track {background: transparent;}
+body::-webkit-scrollbar-thumb {
+  width: 1px;
+  border-radius: 8px;
+  background: #615d5d;
+  background-clip: content-box;
+}
+
+body.white::-webkit-scrollbar-track {background: transparent;}
+body.white::-webkit-scrollbar-thumb{background-color: white;}
+
+.app{
+  margin: 0 auto;
+  max-width: 90%;
+}
+
 body.white{
   color: black;
-  
-  background-image: linear-gradient(to left bottom, #cfcfcf, #a5a5a5);
+  background-image: linear-gradient(to left bottom, #cfcfcf, #979797);
 }
 
 .ft {transition: filter .5s ease;}

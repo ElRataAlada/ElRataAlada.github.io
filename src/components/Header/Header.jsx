@@ -7,7 +7,7 @@ export function Header (){
         <div className='header'>
 
             <ul className='links no-select pointer'>
-                <li className='link'><a href="https://github.com/ElRataAlada" target="blank"><img className='ft' src="../img/icons/github.svg" alt="github"/></a></li>
+                <li className='link' data-title="Github" title='Github'><a href="https://github.com/ElRataAlada" target="blank"><img className='ft' src="../img/icons/github.svg" alt="github"/></a></li>
             </ul>
 
             <div style={{display:"flex", alignItems:"center", gap:"20px"}}>
