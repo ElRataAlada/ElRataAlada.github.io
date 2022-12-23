@@ -16,11 +16,29 @@ body.white{
     align-items: center;
     gap: 8px;
 
+    font-size: 20px;
     padding: 0 10px;
     height: 35px;
 
     img {
         height: 70%;
         filter: brightness(0) invert(100%) saturate(0%);
+    }
+}
+
+@media (min-width: 2000px){
+    .skill{
+        font-size: 35px;
+        height: 80px;
+        border-width: 5px;
+        border-radius: 100px;
+        padding: 0 40px;
+    }
+}
+
+
+@media (max-width: 630px){
+    .skill{
+        padding: 0 15px;
     }
 }

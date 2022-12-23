@@ -1,7 +1,8 @@
 import './Project.min.css'
 
-export function Project ({name, framework="", href, img}){
-
+export function Project ({data}){
+    const {name, href, img, framework=""} = data
+    
     return(
         <div className='project no-select pointer'>
             <a href={href} target="_blank" rel="noreferrer">

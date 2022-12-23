@@ -5,6 +5,7 @@
 
     height: 30px;
     width: 60px;
+    
     border-radius: 20px;
 
     background-color: white;
@@ -62,6 +63,18 @@
             &::before{
                 transform: translate(50%, -50%);
             }
+        }
+    }
+}
+
+
+@media (min-width: 2000px){
+    .theme_changer{
+        height: 40px;
+        width: 80px;
+
+        & .toggle{
+            width: 30px;
         }
     }
 }

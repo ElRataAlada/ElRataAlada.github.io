@@ -4,20 +4,27 @@ import { useEffect, useState } from "react"
 import { Loader } from "./components/Loader/Loader"
 import { Header } from "./components/Header/Header"
 import { Main } from "./components/Main/Main"
-import { Project } from "./components/Project/Project"
 import { Skills } from "./components/skills/Skills"
+import { Projects } from "./components/Projects/Projects"
 
 export const LocaleContext = React.createContext()
+
+const defaultProjects = [
+	{name:"Antools", img:"./img/Antools.png", href:"https://elrataalada.github.io/Antools/"},
+	{name:"Rakfint", img:"./img/Rakfint.png", href:"https://elrataalada.github.io/Rakfint/"},
+	{name:"ActiveBox", img:"./img/ActiveBox.png", href:"https://elrataalada.github.io/ActiveBox/"},
+]
 
 function App() {
 	const [loader, setLoader] = useState(true)
 
 	const [locale, setLoc] = useState(JSON.parse(localStorage.getItem("locale")) || "en")
 
+	const [projects, setProjects] = useState(defaultProjects)
+
 	function setLocale(locale) {
 		setLoc(locale)
 		localStorage.setItem("locale", JSON.stringify(locale))
-		window.location.reload()
 	}
 
 	useEffect(() => {
@@ -39,26 +46,10 @@ function App() {
 				<div className="app">
 					<Header />
 					<Main />
+
 					<Skills />
-
-
-					<div className="projects_wrapper" style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between", gap:"50px"}}>
-						<Project name={"Antools"} img={"./img/Antools.png"} href={"https://elrataalada.github.io/Antools/"} />
-						<Project name={"Rakfint"} img={"./img/Rakfint.png"} href={"https://elrataalada.github.io/Rakfint/"} />
-						<Project name={"ActiveBox"} img={"./img/ActiveBox.png"} href={"https://elrataalada.github.io/ActiveBox/"} />
-					</div>
-
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+					<Projects projects={projects} defaultProjects={defaultProjects} setProjects={setProjects}/>
+					
 				</div>
 			</LocaleContext.Provider>
 		</>

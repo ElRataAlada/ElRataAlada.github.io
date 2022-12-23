@@ -13,8 +13,8 @@ export function Loader (){
     return(
         <div className='loader'>
             <div className='loader_top'>
-                <div className='name_wrapper'>
-                    <h1 className='name'>{text}<span style={{color:"orange"}}>...</span></h1>
+                <div className='text_wrapper'>
+                    <h1 className='loader-text'>{text}<span style={{color:"orange"}}>...</span></h1>
                 </div>
             </div>
             <div className='loader_bottom'>

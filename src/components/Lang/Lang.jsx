@@ -28,11 +28,11 @@ export function Lang (){
         
         <div className="dropdown_wrapper" onMouseLeave={() => {setIsOpen(false)}}>
             <ul className={`dropdown ${isOpen ? "visible" : ""}`}>
-                <li className='component' onClick={() => setLocale('ua')}>
+                <li className='component' onClick={() => {setLocale('ua'); setIsOpen(false)}}>
                     <img src="../img/icons/Ukraine.svg" alt="Ukraine flag"/>
                 </li>
 
-                <li className='component' onClick={() => setLocale('en')}>
+                <li className='component' onClick={() => {setLocale('en'); setIsOpen(false)}}>
                     <img src="../img/icons/USA.svg" alt="USA flag"/>
                 </li>
             </ul>

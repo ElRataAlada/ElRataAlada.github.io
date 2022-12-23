@@ -5,6 +5,7 @@ import './Main.min.css'
 export function Main (){
 
     const scrollLeftRef = useRef();
+    const lightRef = useRef();
 
     const {locale} = React.useContext(LocaleContext)
 
@@ -34,8 +35,8 @@ export function Main (){
                         <h2 className="hello">Hello, I'm</h2>
                         <h1 className="position">front end developer</h1>
                         <p className="text">
-                            My name is Alexander, I have three years of experience as a frontend developer and recently became a backend developer, I am interested in frontend and backend
-                            development, I want to become a Senior Full Stack Developer
+                            My name is Alexander, I am a developer from Ukraine. <br/>
+                            I have a year of experience as a frontend developer and I wish to contribute to the development and visualization Web-sites and Web-applications. 
                         </p>
                     </>
                 ) : (
@@ -43,15 +44,19 @@ export function Main (){
                         <h2 className="hello">Привіт, я</h2>
                         <h1 className="position">front end developer</h1>
                         <p className="text">
-                            Мене звати Олександр, у мене 3 роки досвіду роботи в якості frontend розробника і не так давно став в якості backend розробника, мене цікавить frontend і backend розробка, я хочу стати Senior Full Stack Developer
+                            Мене звати Олександр, я розробник з України <br/>
+                            Я маю річний досвід роботи фронтенд-розробником і хочу зробити свій внесок в розробку та візуалізацію веб-сайтів і веб-додатків.
                         </p>
                     </>
                 )}
             </div>
 
             <div className='desk no-select'>
+
+                <div className='lamp'><img src="./img/lamp.png" alt="lamp"/></div>
+                <div className='light' ref={lightRef} onAnimationEnd={() => {lightRef.current.classList.add("on")}}></div>
+
                 <div className='laptop_wrapper'>
-                    <img className='laptop_img' src="./img/laptop.png" alt="laptop"/>
                     <div className='laptop_screen'>
                         <div className='scroll-element'>
                             <div className="nav f-gray">
@@ -137,9 +142,14 @@ export function Main (){
 
                         </div>
                     </div>
+                    <img className='laptop_img' src="./img/laptop.png" alt="laptop"/>
                 </div>
 
-                <div className='shelf shelf-big'></div>
+                <div className='cup'><img src="./img/cup.svg" alt="cup"/></div>
+                <div className='cactus'><img src="./img/cactus.svg" alt="cactus"/></div>
+
+                <div className='shelf'></div>
+                <div className='wall'></div>
             </div>
         </main>
     )
