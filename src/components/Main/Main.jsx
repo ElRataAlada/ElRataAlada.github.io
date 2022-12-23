@@ -6,6 +6,7 @@ export function Main (){
 
     const scrollLeftRef = useRef();
     const lightRef = useRef();
+    const lampRef = useRef();
 
     const {locale} = React.useContext(LocaleContext)
 
@@ -53,8 +54,8 @@ export function Main (){
 
             <div className='desk no-select'>
 
-                <div className='lamp'><img src="./img/lamp.png" alt="lamp"/></div>
-                <div className='light' ref={lightRef} onAnimationEnd={() => {lightRef.current.classList.add("on")}}></div>
+                <div className='lamp' ref={lampRef} onAnimationEnd={() => {lampRef.current.classList.add("init")}}><img src="./img/lamp.png" alt="lamp"/></div>
+                <div className='light' ref={lightRef} onAnimationEnd={() => {lightRef.current.classList.add("init")}}></div>
 
                 <div className='laptop_wrapper'>
                     <div className='laptop_screen'>

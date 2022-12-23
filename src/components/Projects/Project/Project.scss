@@ -15,7 +15,6 @@ body.white{
     border: 2px solid transparent;
 
     width: 30%;
-    // min-width: 400px;
     margin: 0 auto;
     aspect-ratio: 16/9;
 
@@ -101,23 +100,50 @@ body.white{
     right: 0;
 }
 
+@media (min-width: 2000px){
+    .project{
+        .title{
+            font-size: 40px;
+        }
+
+        .link{
+            height: 60px;
+        }
+    }
+}
+
+@media (max-width: 1178px){
+    .project{
+        width: 45%;
+    }
+}
+
 @media (max-width: 948px){
     .project{
         width: 80%;
-
+        
         &:hover{
             transform: none;
-
-            .link{
-                transform: translate(-50%, 25%) scale(1.5);
-                opacity: 1;
-            }
         }
         
         .link{
-            transform: translate(-50%, 25%) scale(1.5);
+            transform: translateX(-50%);
+            height: 50px;
             opacity: 1;
         }
     }
 }
 
+
+@media (max-width: 630px){
+    .project {
+
+        width: 100%;
+
+        .link{
+            height: 20%;
+            padding: 5px;
+            border-radius: 0 0 7px 7px;
+        }
+    }
+}

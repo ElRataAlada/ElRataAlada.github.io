@@ -27,7 +27,7 @@ export function Header (){
 
             <ul className='links no-select pointer'>
                 <li className='link' data-title="Github" title='Github'><a href="https://github.com/ElRataAlada" target="blank"><img className='ft' src="./img/icons/github.svg" alt="github"/></a></li>
-                <li className='link' data-title="CV" title='Download CV'><a href="./img/icons/cv.png" download><img className='ft' src="./img/icons/cv.png" alt="CV"/></a></li>
+                <li className='link' data-title="CV" title='Download CV'><a href="./img/icons/cv.png"style={{pointerEvents:"none"}} download><img className='ft' src="./img/icons/cv.png" alt="CV"/></a></li>
             </ul>
 
             <div style={{display:"flex", alignItems:"center", gap:"30px"}}>

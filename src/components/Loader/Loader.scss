@@ -103,17 +103,23 @@ body.white{
 
 
 @media (min-width: 2000px){
-    .loader_top{
-        padding-bottom: 140px;
-    }
-    .loader_bottom{
-        padding-top: 190px;
-    }
+    .loader_top { padding-bottom: 140px }
+    .loader_bottom { padding-top: 190px }
+    .loader-text { font-size: 80px }
+    .heart { transform: scale(10) }
+}
 
-    .loader-text{
-        font-size: 80px;
-    }
-    .heart{
-        transform: scale(10);
-    }
+@media (max-width: 630px){
+    .loader-text { font-size: 40px }
+    .heart { transform: scale(6) }
+}
+
+@media (max-width: 505px){
+    .loader-text { font-size: 35px }
+    .heart { transform: scale(5) }
+}
+
+@media (max-width: 370px){
+    .loader-text { font-size: 30px }
+    .heart { transform: scale(4) }
 }

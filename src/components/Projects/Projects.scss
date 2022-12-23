@@ -22,9 +22,12 @@ body.white{
 .empty{
     font-size: 30px;
     height: 7.5em;
-    padding-top: 60px;
+    
     margin: 0 auto;
+    padding-top: 60px;
+
     width: fit-content;
+    text-align: center;
 }
 
 .projects_wrapper{
@@ -48,13 +51,21 @@ body.white{
     }
 }
 
+@media (min-width: 2000px){
+    .projects-title{
+        font-size: 70px;
+    }
+
+    .empty{
+        font-size: 70px;
+        height: 5em;
+        margin-top: 70px;
+    }
+}
+
+
 @media (max-width: 948px){
     .projects_wrapper{
         margin-top: 120px;
-    }
-
-    .projects{
-        margin-top: 70px;
-        gap: 80px;
     }
 }
