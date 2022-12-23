@@ -4,4 +4,7 @@
 .pnp.js
 
 # production
-/build
+/public
+# /build
+
+/src
