@@ -1,5 +1,5 @@
-import './Header.min.css'
-import { Lang } from '../Lang/Lang'
+import './Header.scss'
+import { Lang } from './LangChanger/LangChanger'
 import { ThemeChanger } from './ThemeChanger/ThemeChanger'
 import { useEffect, useRef } from 'react'
 
@@ -12,9 +12,11 @@ export function Header (){
 
             if (window.pageYOffset >= (window.innerHeight-200)){
                 headerRef.current.classList.add("fixed")
+                headerRef.current.classList.remove("hiding")
             }
             else{
                 headerRef.current.classList.remove("fixed")
+                headerRef.current.classList.add("hiding")
             }
         })
 
@@ -23,18 +25,18 @@ export function Header (){
     }, [])
 
     return(
-        <div className='header' ref={headerRef}>
+        <header className='header hiding' ref={headerRef}>
 
             <ul className='links no-select pointer'>
                 <li className='link' data-title="Github" title='Github'><a href="https://github.com/ElRataAlada" target="blank"><img className='ft' src="./img/icons/github.svg" alt="github"/></a></li>
-                <li className='link' data-title="CV" title='Download CV'><a href="./img/icons/cv.png"style={{pointerEvents:"none"}} download><img className='ft' src="./img/icons/cv.png" alt="CV"/></a></li>
+                {/* <li className='link' data-title="CV" title='Download CV'><a href="" style={{pointerEvents:"none"}} download><img className='ft' src="./img/icons/cv.png" alt="CV"/></a></li> */}
             </ul>
 
-            <div style={{display:"flex", alignItems:"center", gap:"30px"}}>
+            <nav style={{display:"flex", alignItems:"center", gap:"20px"}}>
                 <ThemeChanger/>
                 <Lang/>            
-            </div>
+            </nav>
 
-        </div>
+        </header>
     )
 }

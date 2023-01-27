@@ -1,15 +1,17 @@
 import { useContext, useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { LocaleContext } from '../../App'
 import { Filter } from './Filter/Filter'
 import { Project } from './Project/Project'
-import './Projects.min.css'
+import './Projects.scss'
 
-const selectors = [{en:"all", ua:"всі"}, {en:"react", ua:"react"}, {en:"layout", ua:"верстка"}]
+const selectors = [{en:"all", ua:"всі"}, {en:"react", ua:"react"}, {en:"markup", ua:"верстка"}]
 
 export function Projects ({projects, defaultProjects, setProjects}){
     const {locale} = useContext(LocaleContext)
 
     const [selectorId, setSelectorId] = useState(0);
+    const [parent] = useAutoAnimate()
 
     function filterProjects(query=""){
         if(query === 'all'){
@@ -20,7 +22,7 @@ export function Projects ({projects, defaultProjects, setProjects}){
             setProjects([...defaultProjects].filter(project => project["framework"] === 'react') )
         }
 
-        if (query === 'layout') {
+        if (query === 'markup') {
             setProjects([...defaultProjects].filter(project => !project["framework"]))
         }
     }
@@ -35,16 +37,16 @@ export function Projects ({projects, defaultProjects, setProjects}){
 
             <Filter selectors={selectors} setSelectorId={setSelectorId} selectorId={selectorId} filter={filterProjects}/>
 
-            <div className='projects'>
+            <div>
                 {projects.length === 0 ? locale === 'ua' ?
-                    <h3 className='empty'>Проекти вже в розробці, проходьте пізніше</h3>:
-                    <h3 className='empty'>Sorry, no projects yet <span>. . .</span></h3>:
+                    <h3 className='empty'>Тільки цей сайт створено за допомогою React . . .</h3>:
+                    <h3 className='empty'>Only this site is made using React . . .</h3>:
                     <></>
                 } 
 
-                {projects.map(project => {
-                return (<Project data={project} key={project.name}/>)  
-                })}
+                <div ref={parent} className='projects'>
+                    {projects.map(project => <Project key={project.name} data={project}/>)}
+                </div>
 
             </div>
         </div>

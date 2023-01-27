@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Antools",
+		"title": "Landing page with complex animations | SCSS",
+		"img": "./img/Antools.png",
+		"href": "https://elrataalada.github.io/Antools/",
+		"langs": [
+			{ "text": "HTML", "icon": "./img/icons/html.svg" },
+			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
+			{ "text": "JS", "icon": "./img/icons/js.svg" }
+		],
+		"description": "Landing page with animations. Used SCSS and pure JS."
+	},
+	{
+		"name": "Debtors",
+		"title": "App to control who owes your money",
+		"framework": "react",
+		"img": "./img/debtors.png",
+		"href": "https://elrataalada.github.io/debtors/",
+		"langs": [
+			{ "text": "HTML", "icon": "./img/icons/html.svg" },
+			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
+			{ "text": "React", "icon": "./img/icons/react.svg" }
+		],
+		"description": "This app is a simple way to control who owe you money. You can add a new debtor, edit and delete it. It automatically adds tax per month."
+	},
+	{
+		"name": "Rakfint",
+		"title": "Simple landing page with creative design | CSS",
+		"img": "./img/Rakfint.png",
+		"href": "https://elrataalada.github.io/Rakfint/",
+		"langs": [
+			{ "text": "HTML", "icon": "./img/icons/html.svg" },
+			{ "text": "CSS", "icon": "./img/icons/css.svg" }
+		],
+		"description": "A simple landing page with creative design. Made with pure CSS."
+	},
+	{
+		"name": "ActiveBox",
+		"title": "Typical landing page | CSS",
+		"img": "./img/ActiveBox.png",
+		"href": "https://elrataalada.github.io/ActiveBox/",
+		"langs": [
+			{ "text": "HTML", "icon": "./img/icons/html.svg" },
+			{ "text": "CSS", "icon": "./img/icons/css.svg" },
+			{ "text": "JS", "icon": "./img/icons/js.svg" }
+		],
+		"description": "A typical landing page. Made with pure CSS and some JS."
+	}
+]

@@ -1,21 +1,31 @@
-import './Project.min.css'
+import { useState } from 'react'
+import { Popup } from '../../Popup/Popup'
+import { ProjectPopup } from '../ProjectPopup/ProjectPopup'
+import './Project.scss'
 
 export function Project ({data}){
-    const {name, href, img, framework=""} = data
+    const {name, href, img, title, framework=""} = data
+    const [isVisible, setIsVis] = useState(false)
     
-    return(
-        <div className='project no-select pointer'>
-            <a href={href} target="_blank" rel="noreferrer">
-                <img className='img' src={img} alt={name}/>
-                
-                {framework.toLowerCase() === "react" ?  <img className='framework' src="./img/icons/react-color.svg" alt="React logo"/> : <></>}
-                <h3 className='title'>{name}</h3>
+    function setIsVisible(value){
+        setIsVis(value)
+        value ? document.body.style.overflow = "hidden" : document.body.style.overflow = "auto"
+    }
 
-                <a href={`https://github.com/ElRataAlada/${name}`} target="_blank" rel="noreferrer">
-                    <img className='link' src="./img/icons/github.svg" alt="github link"/>
-                </a>
-            </a>
+    return(
+    <>
+        <div className='project no-select pointer' title={title} onClick={() => setIsVisible(true)}>
+            <img className='img' src={img} alt={name}/>
+                
+            <h3 className='title'>
+                <p>{name}</p> 
+                {framework.toLowerCase() === "react" ?  <img src="./img/icons/react.svg" alt="React"/> : <></>}
+            </h3>
         </div>
-        
+
+        <Popup isVisible={isVisible} setIsVisible={setIsVisible}>
+            <ProjectPopup setIsVisible={setIsVisible} project={data}/>
+        </Popup> 
+    </>
     )
 }

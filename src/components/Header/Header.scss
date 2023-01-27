@@ -1,38 +1,55 @@
-body.white{
-    .link img{
-        filter: brightness(0) saturate(100%);
-    }
-}
-
 .header{
     display: flex;
     position: absolute;
     width: 90%;
     justify-content: space-between;
-    
+
     align-items: center;
     z-index: 10;
     
     padding: 20px 50px;
-    
+
     &.fixed{
         position: fixed;
         width: 100%;
         left: 0;
         
-        opacity: 0;
-        background-color: #353535;
-        border-bottom: 2px solid rgb(255, 255, 255);
+        background-color: var(--bg-header);
+        border-bottom: 2px solid var(--border-color);
         
         transform: translateY(-120%);
-        animation: show-header .5s ease;
-        animation-fill-mode: forwards;
+        animation: show-header .5s ease forwards;
+    }
+    
+    &.hiding{
+        animation: hide-header .2s ease;
     }
 }
 
 @keyframes show-header {
     0%{}
-    100%{transform: translate(0, 0); opacity: 1;}
+    100%{transform: translate(0, 0);}
+}
+
+@keyframes hide-header {
+    0%{
+        left: 0;
+        width: 100%;
+        position: fixed;
+        transform: translate(0, 0);
+        
+        background-color: var(--bg-header);
+        border-bottom: 2px solid var(--border-color);
+    }
+    100%{
+        left: 0;
+        width: 100%;
+        position: fixed;
+    
+        background-color: var(--bg-header);
+        border-bottom: 2px solid var(--border-color);
+        transform: translateY(-120%);
+    }
 }
 
 .links{
@@ -42,20 +59,10 @@ body.white{
 
 .link{
     img {
-        height: 30px;
-        filter: brightness(0) invert(100%) saturate(0%);
+        max-height: 30px;
+        filter: var(--link-filter);
     }
 }
-
-
-@media (min-width: 2000px){
-    .link{
-        img {
-            height: 50px;
-        }
-    }
-}
-
 
 @media (max-width: 948px) {
     .link img{
@@ -63,13 +70,8 @@ body.white{
     }
 
     .header{     
-        padding: 10px 20px;
+        padding: 15px 20px;
         width: 100%;
         left: 0;
-    }
-    
-    body.white .header.fixed{
-        background-color: #d6d6d6;
-        border-bottom: 2px solid black;
     }
 }

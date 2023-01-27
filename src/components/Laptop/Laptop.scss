@@ -1,0 +1,291 @@
+
+.laptop_wrapper {
+	position: absolute;
+	bottom: -5%;
+	right: 16%;
+	width: 70%;
+	z-index: 7;
+}
+
+.laptop_img {
+	position: relative;
+	z-index: 7;
+	width: 100%;
+}
+
+.laptop_screen {
+	position: absolute;
+
+	display: flex;
+	gap: 15px;
+	overflow: hidden;
+
+	background-color: rgb(152, 116, 158);
+	width: 66%;
+	height: 65%;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.main-window {
+	position: relative;
+	width: 63%;
+	height: 80%;
+	top: 3%;
+
+	border-radius: 3px;
+	overflow: hidden;
+
+	background-color: #565266;
+}
+
+.main_inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 5px;
+
+	font-size: 8px;
+
+	color: #c7c7c7aa;
+}
+
+.scroll-element {
+	position: relative;
+	width: 30%;
+	height: 85%;
+
+	z-index: 3;
+	background-color: rgb(212, 212, 212);
+
+	top: 50%;
+	left: 10px;
+
+	border-radius: 3px;
+	overflow: hidden;
+
+	transform: translate(0, -50%);
+}
+
+.circle {
+	display: block;
+	border-radius: 50%;
+	height: 4px;
+	aspect-ratio: 1/1;
+	z-index: 5;
+
+	background-color: gray;
+}
+
+.scroll_area {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	padding-top: 100px;
+
+	&::-webkit-scrollbar {
+		background-color: gray;
+		width: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #555555;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-button {
+		display: none;
+		background-color: transparent;
+	}
+}
+
+.scroll-div {
+	position: relative;
+
+	padding: 8px 5px;
+	margin-bottom: 15px;
+
+	border-radius: 5px;
+	width: 80%;
+	height: 50px;
+}
+
+.h-40 { height: 40px }
+.h-50 { height: 50px }
+.h-80 { height: 80px }
+
+.big-line,
+.line {
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 3px;
+
+	margin-bottom: 5px;
+
+	background-color: white;
+}
+
+.code {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	opacity: 0;
+
+	animation: show-code 0.5s 6s ease;
+	transition: none;
+
+	animation-fill-mode: forwards;
+
+	&::after {
+		content: "";
+		display: block;
+
+		height: 40%;
+		width: 100%;
+		border-radius: 5px;
+		background-color: #9293a0;
+	}
+}
+
+.popup-cmd {
+	position: absolute;
+	height: 50%;
+	aspect-ratio: 1/1;
+
+	bottom: 20px;
+	right: 15px;
+
+	overflow: hidden;
+	border-radius: 5px;
+
+	animation: show-popup 1s 10s ease;
+	animation-fill-mode: forwards;
+
+	transform: translate(0, 150%);
+
+	background-color: #333;
+	z-index: 5;
+}
+
+@keyframes show-popup {
+	0% { opacity: 0 }
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+    }
+}
+
+.cmd-in {
+	position: relative;
+	display: block;
+	height: 20px;
+	top: -8px;
+	left: 5px;
+
+	&::after,
+	&::before {
+		content: ">";
+
+		font-size: 8px;
+		font-weight: 700;
+		color: #00cb00;
+	}
+
+	&::after {
+		content: "_";
+		margin-left: 3px;
+		font-weight: 400;
+
+		animation: blink-cmd 0.7s infinite;
+	}
+}
+
+@keyframes blink-cmd {
+	25% { color: transparent }
+	75% { color: #00cb00 }
+}
+
+#c-1 { animation-delay: 6s }
+#c-2 { animation-delay: 6.2s }
+#c-3 { animation-delay: 6.4s }
+#c-4 { animation-delay: 6.6s }
+#c-5 { animation-delay: 7.8s }
+#c-6 { animation-delay: 8s }
+#c-7 { animation-delay: 8.2s }
+#c-8 { animation-delay: 8.4s }
+#c-9 { animation-delay: 8.6s }
+#c-10 { animation-delay: 8.8s }
+#c-11 { animation-delay: 9s }
+#c-12 { animation-delay: 9.2s }
+#c-13 { animation-delay: 9.4s }
+
+@keyframes show-code {
+	0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+
+.big-line { height: 30px }
+
+.nav {
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+	height: 10px;
+
+	background-color: #cfcfcf;
+}
+
+.circle_nav {
+	display: flex;
+	gap: 3px;
+	margin-left: 5px;
+}
+
+.f-gray { filter: brightness(80%) saturate(1%) }
+
+.yellow { background-color: yellow }
+.blue { background-color: #c2e7ef }
+.green { background-color: green }
+.d-green { background-color: #92ac92 }
+.red { background-color: red }
+.purple { background-color: #d0b6d1 }
+
+.l-9 { width: 90% }
+.l-8 { width: 80% }
+.l-6 { width: 60% }
+.l-5 { width: 50% }
+.l-4 { width: 40% }
+.l-3 { width: 30% }
+
+@media (max-width: 1110px) {
+	.laptop_wrapper { bottom: -4% }
+}
+
+@media (max-width: 948px) {
+	.laptop_wrapper { bottom: -5% }
+}
+
+@media (max-width: 630px) {
+	.laptop_wrapper { bottom: -4% }
+
+	.cmd-in{
+		font-size: 10px;
+		top: 0;
+	}
+}
+
+@media (max-width: 505px) {
+	.laptop_wrapper { bottom: -3% }
+}

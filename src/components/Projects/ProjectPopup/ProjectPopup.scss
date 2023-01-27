@@ -1,0 +1,215 @@
+.project__popup{
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(325px, 1fr) 1fr;
+
+    width: 80vw;
+    
+    background-color: var(--bg);
+    overflow: hidden;
+    
+    .btn_close{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+
+        z-index: 105;
+
+        top: 5px;
+        right: 5px;
+        transition: transform .2s ease;
+
+        &::before,
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            width: 50%;
+            height: 3px;
+            border-radius: 3px;
+
+            background-color: var(--text-color);
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after{
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+    
+    &_left{
+        display: flex;
+        object-fit: cover;
+        position: relative;
+    }
+    
+    &_img{
+        position: relative;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    
+    &_right{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 100;
+        
+        padding: 40px;
+        
+        & .title{
+            z-index: inherit;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10%;
+        }
+        
+        & .text{
+            z-index: inherit;
+            font-size: 20px;
+            margin-bottom: 80px;
+        }
+        
+        & .bottom{
+            z-index: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;            
+            
+            width: 100%;
+            gap: 50px;
+        }
+        
+        & .langs{
+            z-index: inherit;
+            width: fit-content;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        & .btns{
+            z-index: inherit;
+            display: flex;
+            width: fit-content;
+            
+            margin:  0 auto;
+            gap: 10px;
+        }
+        
+        .btn{
+            z-index: inherit;
+            position: relative;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            padding: 10px 30px;
+            border-radius: 10px;
+            height: 45px;
+
+            background-color: var(--btn-green);
+            transition: background-color .25s ease;
+
+            &:hover{
+                background-color: var(--btn-green-hover);
+            }
+
+            img{
+                height: 100%;
+            }
+
+            &.main{
+                background-color: var(--btn-blue);
+
+                &:hover{
+                    background-color: var(--btn-blue-hover);
+                }
+            }
+        }
+    }
+}
+
+.wave {
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+    background-color: transparent;
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    rotate: 90deg;
+    transition: 0.4s;
+
+    &::before, &::after {
+        z-index: 1;
+        width: 2000px;
+        height: 2000px;
+        content: '';
+        position: absolute;
+        top: -260px;
+        left: -1000px;
+    }
+
+    &::after {
+        border-radius: 45%;
+        background-color: var(--bg);
+        animation: wave 10s linear infinite;
+    }
+}
+
+
+@keyframes wave {
+    0% {
+      transform: translate(0,-75%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(0,-75%) rotate(360deg);
+    }
+  }
+
+
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -1000000%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .project__popup{
+        grid-template-columns: 1fr;
+
+        &_left{
+            display: none;
+        }
+
+        &_right{
+            .text{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    .project__popup_right{
+        .text{
+            margin-bottom: 50px;
+        }
+    }
+}

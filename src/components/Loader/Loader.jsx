@@ -1,25 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react';
 import { LocaleContext } from '../../App'
-import './Loader.min.css'
+import './Loader.scss'
 
 export function Loader (){
     const {locale} = React.useContext(LocaleContext);
 
-    const ua = "Підтримуй Україну"
-    const en = "Support Ukraine"
+    const text = locale === 'ua' ? "Підтримуй Україну" : "Support Ukraine"
 
-    const text = locale === 'ua' ? ua : en
+    const [isLoading, setIsLoading] = useState(true)
+
+    setTimeout(() => {
+        setIsLoading(false)
+        document.body.style.overflow = "auto"
+    }, 4000)
+    
+    useEffect(() => {
+        document.body.style.overflow = "hidden"
+    }, [])
 
     return(
-        <div className='loader'>
-            <div className='loader_top'>
-                <div className='text_wrapper'>
-                    <h1 className='loader-text'>{text}<span style={{color:"orange"}}>...</span></h1>
+        isLoading ?
+            <div className='loader'>
+                <div className='loader_top'>
+                    <div className='text_wrapper'>
+                        <h1 className='loader-text'>{text}<span style={{color:"orange"}}>...</span></h1>
+                    </div>
+                </div>
+                <div className='loader_bottom'>
+                    <div className='heart'></div>
                 </div>
             </div>
-            <div className='loader_bottom'>
-                <div className='heart'></div>
-            </div>
-        </div>
+        :<></>
     )
 }

@@ -1,4 +1,4 @@
-import './Skill.min.css'
+import './Skill.scss'
 
 export function Skill ({text, icon}){
     return(
