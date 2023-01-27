@@ -21,8 +21,8 @@ export function ProjectPopup ({project, setIsVisible}){
                 </div>
 
                 <div className="btns">
-                    <a className='btn' href={href} target="_blank" rel="noreferrer"><img src="./img/icons/browser.svg" alt="link" title='View site'/></a>
                     <a className='btn main' href={`https://github.com/ElRataAlada/${name}`} target="_blank" rel="noreferrer"><img src="./img/icons/code.png" alt="link" title='Code'/></a>
+                    <a className='btn' href={href} target="_blank" rel="noreferrer"><img src="./img/icons/browser.svg" alt="link" title='View site'/></a>
                 </div>
             </div>
         </div>
