@@ -9,7 +9,7 @@
 			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
 			{ "text": "JS", "icon": "./img/icons/js.svg" }
 		],
-		"description": "This landing page focuses on animations. I made one complex animation with many objects. Also, implemented a simple user login with saving data in local sorage."
+		"description": "Landing page with animations. Used SCSS and pure JS."
 	},
 	{
 		"name": "Debtors",
@@ -33,7 +33,7 @@
 			{ "text": "HTML", "icon": "./img/icons/html.svg" },
 			{ "text": "CSS", "icon": "./img/icons/css.svg" }
 		],
-		"description": "Simple landing page with creative design."
+		"description": "A simple landing page with creative design. Made with pure CSS."
 	},
 	{
 		"name": "ActiveBox",
@@ -45,6 +45,6 @@
 			{ "text": "CSS", "icon": "./img/icons/css.svg" },
 			{ "text": "JS", "icon": "./img/icons/js.svg" }
 		],
-		"description": "Typical landing page. One of my old projects."
+		"description": "A typical landing page. Made with pure CSS and some JS."
 	}
 ]
