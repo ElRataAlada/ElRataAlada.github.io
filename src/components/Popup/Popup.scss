@@ -19,12 +19,17 @@
 }
 
 .popup{
-    z-index: 112;
     cursor: auto;
+    z-index: 112;
+
+    max-width: 90%;
     max-height: 90%;
     overflow-y: scroll;
+
     box-shadow: 0 0 5px var(--border-color);
     border-radius: 20px;
 
-    max-width: 90%;
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
