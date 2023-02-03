@@ -18,11 +18,11 @@
 		"img": "./img/debtors.png",
 		"href": "https://elrataalada.github.io/debtors/",
 		"langs": [
-			{ "text": "HTML", "icon": "./img/icons/html.svg" },
 			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
-			{ "text": "React", "icon": "./img/icons/react.svg" }
+			{ "text": "React", "icon": "./img/icons/react.svg" },
+			{ "text": "Firebase", "icon": "./img/icons/firebase.svg" },
 		],
-		"description": "This app is a simple way to control who owe you money. You can add a new debtor, edit and delete it. It automatically adds tax per month."
+		"description": "This app is an easy way to control who owes you money. You can add, edit and delete new debtors. The app automatically adds taxes per month. You can also change it. Integrating with Firestore allowing you to access your debtors on different devices, but there is also a local version."
 	},
 	{
 		"name": "Rakfint",
