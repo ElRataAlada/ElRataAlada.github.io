@@ -1,0 +1,16 @@
+{
+	"skills": [
+		{ "text": "HTML", "icon": "./img/icons/html.svg" },
+		{ "text": "CSS", "icon": "./img/icons/css.svg" },
+		{ "text": "Sass", "icon": "./img/icons/sass.svg" },
+		{ "text": "JavaScript", "icon": "./img/icons/js.svg" },
+		{ "text": "TypeScript", "icon": "./img/icons/typescript.svg" },
+		{ "text": "React", "icon": "./img/icons/react.svg" },
+		{ "text": "Redux", "icon": "./img/icons/redux.svg" }
+	],
+	"alsoKnow": [
+		{ "text": "Photoshop", "icon": "./img/icons/photoshop.svg" },
+		{ "text": "Figma", "icon": "./img/icons/figma.svg" },
+		{ "text": "Firebase", "icon": "./img/icons/firebase.svg" }
+	]
+}

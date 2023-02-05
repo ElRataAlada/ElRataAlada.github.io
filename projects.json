@@ -9,7 +9,7 @@
 			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
 			{ "text": "JS", "icon": "./img/icons/js.svg" }
 		],
-		"description": "Landing page with animations. Used SCSS and pure JS."
+		"description": "Landing page with animations."
 	},
 	{
 		"name": "Debtors",
@@ -20,9 +20,9 @@
 		"langs": [
 			{ "text": "SCSS", "icon": "./img/icons/sass.svg" },
 			{ "text": "React", "icon": "./img/icons/react.svg" },
-			{ "text": "Firebase", "icon": "./img/icons/firebase.svg" },
+			{ "text": "Firebase", "icon": "./img/icons/firebase.svg" }
 		],
-		"description": "This app is an easy way to control who owes you money. You can add, edit and delete new debtors. The app automatically adds taxes per month. You can also change it. Integrating with Firestore allowing you to access your debtors on different devices, but there is also a local version."
+		"description": "This app is an easy way to control who owes you money. <br/><br/> You can add, edit and delete new debtors. <br/><br/> Integrating with Firestore allowing you to access your debtors on different devices, but there is also a local version."
 	},
 	{
 		"name": "Rakfint",
@@ -33,7 +33,7 @@
 			{ "text": "HTML", "icon": "./img/icons/html.svg" },
 			{ "text": "CSS", "icon": "./img/icons/css.svg" }
 		],
-		"description": "A simple landing page with creative design. Made with pure CSS."
+		"description": "A simple landing page with creative design."
 	},
 	{
 		"name": "ActiveBox",
@@ -45,6 +45,6 @@
 			{ "text": "CSS", "icon": "./img/icons/css.svg" },
 			{ "text": "JS", "icon": "./img/icons/js.svg" }
 		],
-		"description": "A typical landing page. Made with pure CSS and some JS."
+		"description": "A typical landing page."
 	}
 ]
